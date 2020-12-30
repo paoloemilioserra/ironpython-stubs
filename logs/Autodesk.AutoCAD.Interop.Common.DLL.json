@@ -1,0 +1,8 @@
+{
+  "Autodesk.AutoCAD.Interop.Common.DLL": {
+    "Autodesk.AutoCAD": "<module 'AutoCAD' (CLS module from Autodesk.AutoCAD.Interop.Common, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Interop": "<module 'Interop' (CLS module from Autodesk.AutoCAD.Interop.Common, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from Autodesk.AutoCAD.Interop.Common, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Interop.Common": "<module 'Common' (CLS module from Autodesk.AutoCAD.Interop.Common, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "accoremgd.DLL": {
+    "Autodesk.AutoCAD.PlottingServices": "<module 'PlottingServices' (CLS module from accoremgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Runtime": "<module 'Runtime' (CLS module from accoremgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.EditorInput": "<module 'EditorInput' (CLS module from accoremgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD": "<module 'AutoCAD' (CLS module from accoremgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Publishing": "<module 'Publishing' (CLS module from accoremgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.ApplicationServices.Core": "<module 'Core' (CLS module from accoremgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Windows": "<module 'Windows' (CLS module from accoremgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from accoremgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Internal": "<module 'Internal' (CLS module from accoremgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.ApplicationServices": "<module 'ApplicationServices' (CLS module from accoremgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.GraphicsSystem": "<module 'GraphicsSystem' (CLS module from accoremgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "OSGeo.MapGuide.PlatformBase.dll": {
+    "OSGeo": "<module 'OSGeo' (CLS module from OSGeo.MapGuide.PlatformBase, Version=3.4.72.0, Culture=neutral, PublicKeyToken=null)>", 
+    "OSGeo.MapGuide": "<module 'MapGuide' (CLS module from OSGeo.MapGuide.PlatformBase, Version=3.4.72.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "AutoCADNodesUI.dll": {
+    "Autodesk.AutoCAD": "<module 'AutoCAD' (CLS module from AutoCADNodesUI, Version=13.3.860.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.DynamoNodes": "<module 'DynamoNodes' (CLS module from AutoCADNodesUI, Version=13.3.860.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from AutoCADNodesUI, Version=13.3.860.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

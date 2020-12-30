@@ -59,5 +59,8 @@ def _get_attr_by_name(obj, name):
     result = obj
     parts = name.split('.')
     for part in parts:
-        result = getattr(result, part)
+        try:
+            result = getattr(result, part)
+        except:
+            pass
     return result

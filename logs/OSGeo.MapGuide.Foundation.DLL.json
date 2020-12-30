@@ -1,0 +1,6 @@
+{
+  "OSGeo.MapGuide.Foundation.DLL": {
+    "OSGeo": "<module 'OSGeo' (CLS module from OSGeo.MapGuide.Foundation, Version=3.4.72.0, Culture=neutral, PublicKeyToken=null)>", 
+    "OSGeo.MapGuide": "<module 'MapGuide' (CLS module from OSGeo.MapGuide.Foundation, Version=3.4.72.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

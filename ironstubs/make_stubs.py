@@ -85,11 +85,11 @@ def crawl_loaded_references(target_assembly_name):
         assembly_name = assembly.GetName().Name
         assembly_path = assembly.CodeBase
         assembly_filename = os.path.basename(assembly_path)
-        if assembly_name == target_assembly_name:
+        if assembly_name.lower() == target_assembly_name.lower():
             logger.info('Parsing Assembly: {}'.format(assembly_name))
             namespaces_dict[assembly_filename] = iter_module(assembly_name, assembly)
         else:
-            logger.debug('Assembly Skiped. Not in target list: {}'.format(assembly_name))
+            logger.debug('Assembly Skipped. Not in target list: {}'.format(assembly_name))
     return namespaces_dict
 
 
@@ -133,6 +133,7 @@ def make(output_dir, assembly_or_builtin, overwrite=False, quiet=False):
     assembly_dict = {}
     print('='*80)
     logger.info('Making [{}]'.format(assembly_or_builtin))
+
     try:
         clr.AddReference(assembly_or_builtin)
     except:
@@ -149,7 +150,8 @@ def make(output_dir, assembly_or_builtin, overwrite=False, quiet=False):
         assembly_dict = namespaces_dict
 
     if not assembly_dict:
-        raise Exception('No namspaces to process')
+        # raise Exception('No namspaces to process')
+        pass
 
     modules = [d.keys() for d in assembly_dict.values()]
     logger.info('Modules and Assemblies Loaded: {}'.format(modules))
@@ -161,7 +163,10 @@ def make(output_dir, assembly_or_builtin, overwrite=False, quiet=False):
         for assembly, modules in assembly_dict.items():
             for module_path in modules.keys():
                 if not stub_exists(output_dir, module_path) or overwrite:
-                    create_stubs(output_dir, module_path)
+                    try:
+                        create_stubs(output_dir, module_path)
+                    except Exception() as ex:
+                        logger.info('ERROR [{}] {}'.format(module_path, ex.message))
                 else:
                     logger.info('Skipping [{}] Already Exists'.format(module_path))
             for module_path in modules.keys():
@@ -169,11 +174,3 @@ def make(output_dir, assembly_or_builtin, overwrite=False, quiet=False):
 
         logger.info('Stubs Created')
     return assembly_dict
-
-
-
-
-
-
-
-

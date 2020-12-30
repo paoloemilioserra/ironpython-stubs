@@ -1,0 +1,10 @@
+{
+  "AeccPressurePipesMgd.DLL": {
+    "Autodesk.Civil.DatabaseServices": "<module 'DatabaseServices' (CLS module from AeccPressurePipesMgd, Version=13.3.854.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Civil.DatabaseServices.Styles": "<module 'Styles' (CLS module from AeccPressurePipesMgd, Version=13.3.854.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from AeccPressurePipesMgd, Version=13.3.854.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Civil.Settings": "<module 'Settings' (CLS module from AeccPressurePipesMgd, Version=13.3.854.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Civil.ApplicationServices": "<module 'ApplicationServices' (CLS module from AeccPressurePipesMgd, Version=13.3.854.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Civil": "<module 'Civil' (CLS module from AeccPressurePipesMgd, Version=13.3.854.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

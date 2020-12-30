@@ -1,0 +1,8 @@
+{
+  "AecPropDataMgd.dll": {
+    "Autodesk.Aec.PropertyData.DatabaseServices": "<module 'DatabaseServices' (CLS module from AecPropDataMgd, Version=8.3.53.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Aec.PropertyData": "<module 'PropertyData' (CLS module from AecPropDataMgd, Version=8.3.53.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from AecPropDataMgd, Version=8.3.53.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Aec": "<module 'Aec' (CLS module from AecPropDataMgd, Version=8.3.53.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

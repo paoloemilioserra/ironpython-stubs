@@ -1,0 +1,10 @@
+{
+  "Autodesk.Map.Platform.Utils.dll": {
+    "Autodesk.Gis.Map": "<module 'Map' (CLS module from Autodesk.Map.Platform.Utils, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Gis": "<module 'Gis' (CLS module from Autodesk.Map.Platform.Utils, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Gis.Map.Platform": "<module 'Platform' (CLS module from Autodesk.Map.Platform.Utils, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from Autodesk.Map.Platform.Utils, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Gis.Map.Platform.Utils.Globalization": "<module 'Globalization' (CLS module from Autodesk.Map.Platform.Utils, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Gis.Map.Platform.Utils": "<module 'Utils' (CLS module from Autodesk.Map.Platform.Utils, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

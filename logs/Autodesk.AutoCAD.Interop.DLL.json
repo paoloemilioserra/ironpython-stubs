@@ -1,0 +1,7 @@
+{
+  "Autodesk.AutoCAD.Interop.DLL": {
+    "Autodesk.AutoCAD": "<module 'AutoCAD' (CLS module from Autodesk.AutoCAD.Interop, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Interop": "<module 'Interop' (CLS module from Autodesk.AutoCAD.Interop, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from Autodesk.AutoCAD.Interop, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

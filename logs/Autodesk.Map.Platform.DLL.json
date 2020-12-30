@@ -1,0 +1,12 @@
+{
+  "Autodesk.Map.Platform.DLL": {
+    "Autodesk.Gis": "<module 'Gis' (CLS module from Autodesk.Map.Platform, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>", 
+    "OSGeo": "<module 'OSGeo' (CLS module from Autodesk.Map.Platform, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>", 
+    "OSGeo.MapGuide": "<module 'MapGuide' (CLS module from Autodesk.Map.Platform, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Gis.Map.Platform": "<module 'Platform' (CLS module from Autodesk.Map.Platform, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from Autodesk.Map.Platform, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Gis.Map.Platform.Interop": "<module 'Interop' (CLS module from Autodesk.Map.Platform, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Gis.Map.Platform.Internal": "<module 'Internal' (CLS module from Autodesk.Map.Platform, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Gis.Map": "<module 'Map' (CLS module from Autodesk.Map.Platform, Version=24.0.30.14, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

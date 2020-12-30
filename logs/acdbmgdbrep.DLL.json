@@ -1,0 +1,7 @@
+{
+  "acdbmgdbrep.DLL": {
+    "Autodesk.AutoCAD": "<module 'AutoCAD' (CLS module from acdbmgdbrep, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.BoundaryRepresentation": "<module 'BoundaryRepresentation' (CLS module from acdbmgdbrep, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from acdbmgdbrep, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

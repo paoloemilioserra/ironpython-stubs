@@ -1,7 +1,7 @@
 import keyword
 
-from util_methods import *
-from constants import *
+from .util_methods import *
+from .constants import *
 
 
 class emptylistdict(dict):
@@ -179,13 +179,17 @@ class ModuleRedeclarator(object):
             for mname in self.imported_modules:
                 m = self.imported_modules[mname]
                 for inner_name in m.__dict__:
-                    suspect = getattr(m, inner_name)
-                    if suspect is item:
-                        if mname:
-                            mname += "."
-                        elif self.module is the_builtins: # don't short-circuit builtins
-                            return None
-                        return mname + inner_name
+                    try:
+                        suspect = getattr(m, inner_name)
+
+                        if suspect is item:
+                            if mname:
+                                mname += "."
+                            elif self.module is the_builtins: # don't short-circuit builtins
+                                return None
+                            return mname + inner_name
+                    except:
+                        pass
         return None
 
     _initializers = (
@@ -324,10 +328,15 @@ class ModuleRedeclarator(object):
         Returns a return type string as given by T_RETURN in tokens, or None
         """
         if attr:
+
             ret_type = RET_TYPE.get(attr, None)
             if ret_type:
                 return ret_type
-            thing = getattr(self.module, attr, None)
+            thing = None
+            try:
+                thing = getattr(self.module, attr, None)
+            except:
+                pass
             if thing:
                 if not isinstance(thing, type) and is_callable(thing): # a function
                     return None # TODO: maybe divinate a return type; see pygame.mixer.Channel
@@ -338,7 +347,11 @@ class ModuleRedeclarator(object):
                 cached = self.ret_type_cache.get(cache_key, None)
                 if cached:
                     return cached
-                ret_type = getattr(im_module, attr, None)
+                ret_type = None
+                try:
+                    ret_type = getattr(im_module, attr, None)
+                except:
+                    pass
                 if ret_type:
                     if isinstance(ret_type, type):
                         # detect a constructor
@@ -689,12 +702,15 @@ class ModuleRedeclarator(object):
                         continue
                 except Exception:
                     continue
-            if is_callable(item) and not isinstance(item, type):
-                methods[item_name] = item
-            elif is_property(item):
-                properties[item_name] = item
-            else:
-                others[item_name] = item
+            try:
+                if is_callable(item) and not isinstance(item, type):
+                    methods[item_name] = item
+                elif is_property(item):
+                    properties[item_name] = item
+                else:
+                    others[item_name] = item
+            except Exception:
+                continue
                 #
         if we_are_the_base_class:
             others["__dict__"] = {} # force-feed it, for __dict__ does not contain a reference to itself :)
@@ -826,11 +842,14 @@ class ModuleRedeclarator(object):
         action("redoing header of module %r %r", p_name, str(self.module))
 
         if "pyqt4" in p_name.lower():   # qt4 specific patch
+
             self._initializeQApp4()
         elif "pyqt5" in p_name.lower():   # qt5 specific patch
+
             self._initializeQApp5()
 
         self.redo_simple_header(p_name)
+        say('       Simple Header {}'.format(p_name))
 
         # find whatever other self.imported_modules the module knows; effectively these are imports
         action("redoing imports of module %r %r", p_name, str(self.module))
@@ -840,6 +859,7 @@ class ModuleRedeclarator(object):
             pass
 
         action("redoing innards of module %r %r", p_name, str(self.module))
+        say("redoing innards of module %r %r", p_name, str(self.module))
 
         module_type = type(sys)
         # group what we have into buckets
@@ -852,11 +872,19 @@ class ModuleRedeclarator(object):
             module_dict = dir(self.module)
         for item_name in module_dict:
             note("looking at %s", item_name)
-            if item_name in (
-                "__dict__", "__doc__", "__module__", "__file__", "__name__", "__builtins__", "__package__"):
-                continue # handled otherwise
+            t1 = 'CustomObjectSnapMode' in item_name
+            # t2 = 'native_GetFactoryBase' in item_name
+            t3 = 'RXClass' in item_name
+            t4 = 'DbObjectProxy' in item_name
+            if t1 or t3 or t4:
+                say('{} {}'.format(p_name, item_name))
+                continue
+            say('{} {}'.format(p_name, item_name))
+            if item_name in ("__dict__", "__doc__", "__module__", "__file__", "__name__", "__builtins__", "__package__"):
+                continue  # handled otherwise
             try:
                 item = getattr(self.module, item_name) # let getters do the magic
+
             except AttributeError:
                 if not item_name in self.module.__dict__: continue
                 item = self.module.__dict__[item_name] # have it raw
@@ -864,6 +892,8 @@ class ModuleRedeclarator(object):
             except NotImplementedError:
                 if not item_name in self.module.__dict__: continue
                 item = self.module.__dict__[item_name] # have it raw
+            except:
+                continue
 
             # unless we're adamantly positive that the name was imported, we assume it is defined here
             mod_name = None # module from which p_name might have been imported
@@ -895,7 +925,11 @@ class ModuleRedeclarator(object):
                     if imported:
                         qualifiers = mod_name.split(".")[1:]
                         for qual in qualifiers:
-                            imported = getattr(imported, qual, None)
+                            importer = None
+                            try:
+                                imported = getattr(imported, qual, None)
+                            except:
+                                pass
                             if not imported:
                                 break
                         imported_path = (getattr(imported, '__file__', False) or "").lower()
@@ -1000,8 +1034,11 @@ class ModuleRedeclarator(object):
                 self.classes_buffs.append(buf)
                 out = buf.out
                 if item_name in omitted_names:
-                    out(0, "# definition of ", item_name, " omitted")
-                    continue
+                    try:
+                        out(0, "# definition of ", item_name, " omitted")
+                        continue
+                    except Exception:
+                        pass
                 item = classes[item_name]
                 self.redo_class(out, item, item_name, 0, p_modname=p_name, seen=seen_classes, inspect_dir=inspect_dir)
                 self._defined[item_name] = True
@@ -1028,7 +1065,6 @@ class ModuleRedeclarator(object):
                 if version[0] >= 3 or (version[0] == 2 and version[1] >= 6):
                     namedtuple_text = create_named_tuple()
                     self.classes_buf.out(0, namedtuple_text)
-
         else:
             self.classes_buf.out(0, "# no classes")
             #
@@ -1064,6 +1100,7 @@ class ModuleRedeclarator(object):
         if self.imports_buf.isEmpty():
             self.imports_buf.out(0, "# no imports")
         self.imports_buf.out(0, "") # empty line after imports
+
 
     def output_import_froms(self):
         """Mention all imported names known within the module, wrapping as per PEP."""

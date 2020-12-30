@@ -1,0 +1,23 @@
+{
+  "Acmgd.DLL": {
+    "Autodesk.AutoCAD.Windows.Data.Render.RapidRT": "<module 'RapidRT' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Windows.ToolPalette": "<module 'ToolPalette' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Internal.Windows": "<module 'Windows' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Internal.Render": "<module 'Render' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Internal.Render.RapidRT": "<module 'RapidRT' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.EditorInput": "<module 'EditorInput' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD": "<module 'AutoCAD' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Windows.Data.Render": "<module 'Render' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Internal.PreviousInput": "<module 'PreviousInput' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Internal.PropertyInspector": "<module 'PropertyInspector' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Internal.Reactors": "<module 'Reactors' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Windows": "<module 'Windows' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Internal.Calculator": "<module 'Calculator' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.ApplicationServices": "<module 'ApplicationServices' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Windows.Data": "<module 'Data' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Internal": "<module 'Internal' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Internal.Forms": "<module 'Forms' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Internal.DatabaseServices": "<module 'DatabaseServices' (CLS module from Acmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

@@ -5,13 +5,13 @@ import shutil
 
 # TODO: Move all CLR-specific functions to clr_tools
 
-from pycharm_generator_utils.module_redeclarator import *
-from pycharm_generator_utils.util_methods import *
-from pycharm_generator_utils.constants import *
-from pycharm_generator_utils.clr_tools import *
+from .pycharm_generator_utils.module_redeclarator import *
+from .pycharm_generator_utils.util_methods import *
+from .pycharm_generator_utils.constants import *
+from .pycharm_generator_utils.clr_tools import *
 
 
-debug_mode = False
+debug_mode = True
 
 
 def redo_module(module_name, outfile, module_file_name, doing_builtins):
@@ -29,15 +29,22 @@ def redo_module(module_name, outfile, module_file_name, doing_builtins):
             try:
                 mod = getattr(mod, component)
             except AttributeError:
-                mod = None
-                report("Failed to find CLR module " + module_name)
-                break
+                pass
+                # mod = None
+                # report("Failed to find CLR module " + module_name)
+                # break
     if mod:
+
         action("restoring")
         r = ModuleRedeclarator(mod, outfile, module_file_name, doing_builtins=doing_builtins)
-        r.redo(module_name, ".".join(mod_path[:-1]) in MODULES_INSPECT_DIR)
-        action("flushing")
-        r.flush()
+
+        try:
+            r.redo(module_name, ".".join(mod_path[:-1]) in MODULES_INSPECT_DIR)
+            action("flushing")
+            r.flush()
+        except: # Exception() as ex:
+            r.flush()()
+            # report("Failed to redo the generator: {0}".format(ex.message))
     else:
         report("Failed to find imported module in sys.modules " + module_name)
 
@@ -290,10 +297,15 @@ def process_one(name, mod_file_name, doing_builtins, subdir, quiet=False):
 
         if my_finder:
             sys.meta_path.remove(my_finder)
+
         if imported_module_names is None:
-            imported_module_names = [m for m in sys.modules.keys() if m not in old_modules]
+            try:
+                imported_module_names = [m for m in sys.modules.keys() if m not in old_modules]
+            except Exception:
+                pass
 
         redo_module(name, fname, mod_file_name, doing_builtins)
+
         # The C library may have called Py_InitModule() multiple times to define several modules (gtk._gtk and gtk.gdk);
         # restore all of them
         path = name.split(".")

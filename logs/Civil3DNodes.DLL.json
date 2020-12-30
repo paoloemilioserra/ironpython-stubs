@@ -1,0 +1,7 @@
+{
+  "Civil3DNodes.dll": {
+    "Autodesk.Civil": "<module 'Civil' (CLS module from Civil3DNodes, Version=13.3.860.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from Civil3DNodes, Version=13.3.860.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Civil.DynamoNodes": "<module 'DynamoNodes' (CLS module from Civil3DNodes, Version=13.3.860.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

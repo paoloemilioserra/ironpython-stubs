@@ -1,0 +1,10 @@
+{
+  "AecBaseMgd.DLL": {
+    "Autodesk.Aec.DatabaseServices": "<module 'DatabaseServices' (CLS module from AecBaseMgd, Version=8.3.53.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Aec.Modeler": "<module 'Modeler' (CLS module from AecBaseMgd, Version=8.3.53.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Aec": "<module 'Aec' (CLS module from AecBaseMgd, Version=8.3.53.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Aec.Geometry": "<module 'Geometry' (CLS module from AecBaseMgd, Version=8.3.53.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from AecBaseMgd, Version=8.3.53.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.Aec.ApplicationServices": "<module 'ApplicationServices' (CLS module from AecBaseMgd, Version=8.3.53.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

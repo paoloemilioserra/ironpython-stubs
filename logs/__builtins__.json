@@ -1,5 +1,5 @@
 {
   "__builtins__": {
-    "System": "Microsoft.Scripting.Actions.NamespaceTracker:System"
+    "Autodesk.AutoCAD": "<module 'Autodesk.AutoCAD' from 'D:\\Python\\ironpython-stubs\\release\\stubs\\Autodesk\\AutoCAD\\__init__.py'>"
   }
 }

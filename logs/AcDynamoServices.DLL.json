@@ -1,0 +1,8 @@
+{
+  "AcDynamoServices.DLL": {
+    "Autodesk.AutoCAD": "<module 'AutoCAD' (CLS module from AcDynamoServices, Version=13.3.860.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from AcDynamoServices, Version=13.3.860.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.DynamoApp": "<module 'DynamoApp' (CLS module from AcDynamoServices, Version=13.3.860.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.DynamoApp.Services": "<module 'Services' (CLS module from AcDynamoServices, Version=13.3.860.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}

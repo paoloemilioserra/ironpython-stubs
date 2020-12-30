@@ -1,0 +1,17 @@
+{
+  "acdbmgd.dll": {
+    "Autodesk.AutoCAD.Runtime": "<module 'Runtime' (CLS module from Acdbmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.DatabaseServices": "<module 'DatabaseServices' (CLS module from Acdbmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.DatabaseServices.Internal": "<module 'Internal' (CLS module from Acdbmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.LayerManager": "<module 'LayerManager' (CLS module from Acdbmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD": "<module 'AutoCAD' (CLS module from Acdbmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.GraphicsInterface": "<module 'GraphicsInterface' (CLS module from Acdbmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.DatabaseServices.Filters": "<module 'Filters' (CLS module from Acdbmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk": "<module 'Autodesk' (CLS module from Acdbmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Internal": "<module 'Internal' (CLS module from Acdbmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.GraphicsSystem": "<module 'GraphicsSystem' (CLS module from Acdbmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Colors": "<module 'Colors' (CLS module from Acdbmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.ComponentModel": "<module 'ComponentModel' (CLS module from Acdbmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>", 
+    "Autodesk.AutoCAD.Geometry": "<module 'Geometry' (CLS module from Acdbmgd, Version=24.0.0.0, Culture=neutral, PublicKeyToken=null)>"
+  }
+}
